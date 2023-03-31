@@ -28,7 +28,7 @@ class Layering:
             "optional": {
                 "add_layer2": ("IMAGE", {"default": None}),
                 "add_layer3": ("IMAGE", {"default": None}),
-                "key_color": ("TUPLE", {"default": (255, 255, 255)}),
+                # "key_color": ("TUPLE", {"default": (255, 255, 255)}),
                 # "alpha1": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.01}),
                 # "alpha2": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.01}),
                 # "alpha3": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.01}),
@@ -72,7 +72,7 @@ class Layering:
         return transparent_image
 
 
-    def apply_blend(self, base_image, add_layer1, alpha1, add_layer2=None, alpha2=1.0, add_layer3=None, alpha3=1.0, key_color=(255, 255, 255)):
+    def apply_blend(self, base_image, add_layer1, alpha1=1.0, add_layer2=None, alpha2=1.0, add_layer3=None, alpha3=1.0):
         base_image = self.tensor_to_pil(base_image[0]).convert('RGBA')
         add_layers = [(add_layer1, alpha1), (add_layer2, alpha2), (add_layer3, alpha3)]
         add_layers = [(self.tensor_to_pil(layer[0]).convert('RGBA'), alpha) for layer, alpha in add_layers if layer is not None]
