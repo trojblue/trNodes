@@ -19,12 +19,19 @@ cd python_embeded
 
 image_layering:
 - Adds 1-3 layers of image on top of one another; will remove white background and use it as transparent layers
+- TODO: add alpha control
 
 color_correction:
 - Adjusts the color of the target image according to another image; ported from stable diffusion WebUI
 
 model_router:
 - Batch reroutes `model`, `clip`, `vae`, `condition_1` and `condition_2` for cleaner workflow
+
+## Use
+1. Install nodes
+2. open ComfyUI
+3. You'll find the new nodes under `trNodes` folder
+
 
 ## External Nodes
 
