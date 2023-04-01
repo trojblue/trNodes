@@ -37,7 +37,7 @@ class Layering:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "apply_blend"
-    CATEGORY = "trojblue_folder"
+    CATEGORY = "trNodes"
 
     def tensor_to_pil(self, img):
         if img is not None:

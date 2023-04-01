@@ -22,3 +22,11 @@ image_layering:
 color_correction:
 - Adjusts the color of the target image according to another image; ported from stable diffusion WebUI
 
+
+
+## External Nodes
+
+[WAS Node suite](https://civitai.com/models/20793/was-node-suites-comfyui) 
+- Image Blend by Mask: Blend two images by a mask (but all nodes are very good)
+
+and even look this: https://civitai.com/models/24869/comfyui-custom-nodes-by-xss

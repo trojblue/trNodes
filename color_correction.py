@@ -13,11 +13,12 @@ class ColorCorrectionNode:
                 "original_image": ("IMAGE",),
                 "target_image": ("IMAGE",),
             },
+
         }
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "color_correct"
-    CATEGORY = "trojblue_folder"
+    CATEGORY = "trNodes"
 
     def tensor_to_pil(self, img):
         if img is not None:
