@@ -10,8 +10,9 @@ class ColorCorrectionNode:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "original_image": ("IMAGE",),
-                "target_image": ("IMAGE",),
+                "TARGET_IMAGE": ("IMAGE",),
+                "reference": ("IMAGE",),
+                "inverse selection": (["False", "True"],),
             },
 
         }
@@ -44,11 +45,14 @@ class ColorCorrectionNode:
         image = blendLayers(image, original_image, BlendType.LUMINOSITY)
         return image
 
-    def color_correct(self, original_image, target_image):
+    def color_correct(self, original_image, target_image, inverse_selection="False"):
         original_image = self.tensor_to_pil(original_image)
         target_image = self.tensor_to_pil(target_image)
 
-        corrected_image = self.apply_color_correction(target_image, original_image)
+        if inverse_selection == "False":
+            corrected_image = self.apply_color_correction(target_image, original_image)
+        else:
+            corrected_image = self.apply_color_correction(original_image, target_image)
 
         # convert to tensor
         corrected_image = corrected_image.convert('RGB')
