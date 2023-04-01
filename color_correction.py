@@ -57,6 +57,3 @@ class ColorCorrectionNode:
 
         return (out_image,)
 
-NODE_CLASS_MAPPINGS = {
-    "ColorCorrectionNode": ColorCorrectionNode
-}

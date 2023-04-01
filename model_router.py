@@ -43,9 +43,3 @@ class ModelRouterPlugin:
     def execute(self, model=None, clip=None, vae=None, conditioning1=None, conditioning2=None):
         return model, clip, vae, conditioning1, conditioning2
 
-
-# A dictionary that contains all nodes you want to export with their names
-# NOTE: names should be globally unique
-NODE_CLASS_MAPPINGS = {
-    "trRouter": ModelRouterPlugin
-}

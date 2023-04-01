@@ -90,9 +90,6 @@ class Layering:
 
         return (out_image,)
 
-NODE_CLASS_MAPPINGS = {
-    "Layering": Layering,
-}
 
 
 

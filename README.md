@@ -22,7 +22,8 @@ image_layering:
 color_correction:
 - Adjusts the color of the target image according to another image; ported from stable diffusion WebUI
 
-
+model_router:
+- Batch reroutes `model`, `clip`, `vae`, `condition_1` and `condition_2` for cleaner workflow
 
 ## External Nodes
 
