@@ -10,6 +10,7 @@ custom node modules for ComfyUI
 2. install dependencies:
 
 ```bash
+# go to project python folder
 cd python_embeded
 ./python.exe -m pip install -r opencv-python scikit-image blendmodes
 ```
