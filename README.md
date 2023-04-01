@@ -1,5 +1,5 @@
 
-# comfy-custom-nodes
+# trNodes
 
 custom node modules for ComfyUI
 
