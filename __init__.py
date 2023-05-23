@@ -1,7 +1,7 @@
-import custom_nodes.comfy_nodes_trojblue.image_layering as image_layering
-import custom_nodes.comfy_nodes_trojblue.color_correction as color_correction
-import custom_nodes.comfy_nodes_trojblue.model_router as model_router
-import custom_nodes.comfy_nodes_trojblue.shortcut_nodes as shortcut_nodes
+import custom_nodes.trNodes.image_layering as image_layering
+import custom_nodes.trNodes.color_correction as color_correction
+import custom_nodes.trNodes.model_router as model_router
+import custom_nodes.trNodes.shortcut_nodes as shortcut_nodes
 
 
 NODE_CLASS_MAPPINGS = {
